@@ -1,2 +1,1 @@
-# rowan-vocab-obby
-rowan-vocab-obby
+Rowan's Word Obby: a vocab practice game. Play at https://gilmorekpg.github.io/rowan-vocab-obby/

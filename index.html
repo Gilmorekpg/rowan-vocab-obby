@@ -711,15 +711,15 @@ body.no-speech .spk, body.no-speech .needs-speech { display: none !important; }
     <h2 class="section-h">1. Pick your course</h2>
     <div class="modes">
       <button class="mode-btn" data-mode="reading" data-testid="mode-reading" aria-pressed="true">
-        <div class="mode-emoji" aria-hidden="true">🐺🐑</div>
-        <div class="mode-title">Wolf! Wolf! Reading Words</div>
-        <div class="mode-tag">Test TOMORROW Thu 10/22!</div>
+        <div class="mode-emoji" aria-hidden="true">📚🐴</div>
+        <div class="mode-title">U3 W1&amp;2 Reading Words (Biblioburro)</div>
+        <div class="mode-tag">Test Thu 11/19</div>
         <div class="mode-best" id="best-reading">Best: none yet</div>
       </button>
       <button class="mode-btn" data-mode="map" data-testid="mode-map" aria-pressed="false">
-        <div class="mode-emoji" aria-hidden="true">🗺️⛰️</div>
-        <div class="mode-title">Social Studies Map Words</div>
-        <div class="mode-tag">Test Tue 10/27</div>
+        <div class="mode-emoji" aria-hidden="true">🌍🌱</div>
+        <div class="mode-title">Social Studies 2.5 Words</div>
+        <div class="mode-tag">Test Tue 11/17</div>
         <div class="mode-best" id="best-map">Best: none yet</div>
       </button>
     </div>
@@ -818,114 +818,78 @@ body.no-speech .spk, body.no-speech .needs-speech { display: none !important; }
   var SETS = {
     reading: {
       key: 'reading',
-      name: 'Wolf! Wolf! Reading Words',
+      name: 'U3 W1&2 Reading Words (Biblioburro)',
       words: [
-        { w: 'believe', d: 'to think something is true',
-          dd: ['to wonder if something is true', 'to say something that is not true', 'to forget something you learned', 'to grab quickly'],
-          dw: ['wonder', 'forget', 'snatch', 'feast'],
+        { w: 'across', d: 'from one side to the other',
+          dd: ['all the way around the outside', 'from the top down to the bottom', 'very close, but not on the other side', 'right behind something'],
+          dw: ['around', 'under', 'beside', 'behind'],
           s: [
-            { t: 'The boy cried "Wolf!" so many times that nobody would ___ him.', dw: ['feast', 'wonder', 'fond'] },
-            { t: 'I ___ that the sun will come up tomorrow.', dw: ['snatch', 'feast', 'fond'] } ] },
-        { w: 'delicious', d: 'good to taste',
-          dd: ['good to look at', 'nice to smell', 'bad to taste', 'not ordinary, wonderful'],
-          dw: ['crunchy', 'sour', 'remarkable', 'fond'],
+            { t: 'The little bridge goes ___ the stream, from one bank to the other.', dw: ['under', 'behind', 'beside'] },
+            { t: 'We swam ___ the pond, from one bank to the other.', dw: ['behind', 'near', 'under'] } ] },
+        { w: 'borrow', d: 'to take and return later, to take as a loan',
+          dd: ['to keep something and never give it back', 'to give something away for good', 'to buy something and keep it', 'to hide something so no one can find it'],
+          dw: ['keep', 'lend', 'buy', 'steal'],
           s: [
-            { t: "Grandma's cookies are ___!", dw: ['fond', 'hungry', 'stories'] },
-            { t: "Yum! The farmer's apple pie tastes ___.", dw: ['sour', 'fond', 'hungry'] } ] },
-        { w: 'feast', d: 'to eat very well',
-          dd: ['to eat just a small snack', 'to cook a big meal', 'to skip a meal', 'to grab quickly'],
-          dw: ['nibble', 'cook', 'snatch', 'believe'],
+            { t: 'May I ___ your book? I promise to bring it back tomorrow.', dw: ['keep', 'buy', 'steal'] },
+            { t: 'The children ___ books from the burro and return them on the next visit.', dw: ['keep', 'buy', 'lend'] } ] },
+        { w: 'countryside', d: 'the lands outside of cities and towns',
+          dd: ['the busy streets in the middle of a city', 'small groups of houses', 'one house and the yard around it', 'tall buildings close together'],
+          dw: ['city', 'village', 'downtown', 'neighborhood'],
           s: [
-            { t: 'The hungry wolf wanted to ___ on the sheep.', dw: ['believe', 'cook', 'fond'] },
-            { t: 'At the big party, we will ___ on pizza and cake.', dw: ['believe', 'snatch', 'cook'] } ] },
-        { w: 'fond', d: 'to enjoy a great deal',
-          dd: ['to be afraid of something', 'to be bored by something', 'to think something is true', 'to grab quickly'],
-          dw: ['afraid', 'tired', 'believe', 'snatch'],
+            { t: 'Cows and cornfields fill the quiet ___ far outside the city.', dw: ['city', 'library', 'ocean'] },
+            { t: 'The burro walks for miles through the ___ where there are no big cities.', dw: ['downtown', 'library', 'ocean'] } ] },
+        { w: 'idea', d: 'thoughts',
+          dd: ['a picture drawn on paper', 'a loud sound you hear', 'something you can hold in your hand', 'a place you visit'],
+          dw: ['picture', 'sound', 'place', 'story'],
           s: [
-            { t: 'The shepherd boy was very ___ of his sheep.', dw: ['afraid', 'delicious', 'remarkable'] },
-            { t: 'My dog is so ___ of his squeaky toy.', dw: ['delicious', 'remarkable', 'hungry'] } ] },
-        { w: 'lessons', d: 'things to be taught or learned',
-          dd: ['tales of things that have happened', 'games you play for fun', 'tests you take at school', 'people who teach a class'],
-          dw: ['stories', 'games', 'tests', 'teachers'],
+            { t: 'Luis had an ___ for how to fix the wobbly book cart.', dw: ['animal', 'envelope', 'umbrella'] },
+            { t: 'His best ___ was to share one book with two friends.', dw: ['picture', 'sound', 'place'] } ] },
+        { w: 'insists', d: 'to demand',
+          dd: ['to ask in a soft, gentle way', 'to give up and let someone else choose', 'to forget what you wanted', 'to copy what another person does'],
+          dw: ['asks', 'agrees', 'forgets', 'whispers'],
           s: [
-            { t: 'I take swimming ___ at the pool every Saturday.', dw: ['teachers', 'snacks', 'feast'] },
-            { t: 'Our teacher has fun math ___ for us today.', dw: ['teachers', 'feast', 'fond'] } ] },
-        { w: 'remarkable', d: 'not ordinary, wonderful',
-          dd: ['plain and ordinary', 'good to taste', 'a little bit scary', 'not true, made up'],
-          dw: ['ordinary', 'boring', 'delicious', 'scary'],
+            { t: 'My little sister ___ on wearing her red boots every day.', dw: ['asks', 'helps', 'reads'] },
+            { t: 'The librarian ___ on quiet voices inside the library.', dw: ['borrows', 'draws', 'sleeps'] } ] },
+        { w: 'lonely', d: 'unhappy from being alone',
+          dd: ['happy to be with a big group of friends', 'angry because a game was not fair', 'tired from running a long way', 'scared of a loud noise'],
+          dw: ['happy', 'angry', 'tired', 'alone'],
           s: [
-            { t: 'The magician did a ___ trick that amazed everyone!', dw: ['boring', 'ordinary', 'delicious'] },
-            { t: 'Wow! A sheep that can sing? That is ___!', dw: ['boring', 'ordinary', 'delicious'] } ] },
-        { w: 'snatch', d: 'to grab quickly',
-          dd: ['to hold gently', 'to give something away', 'to put down slowly', 'to eat very well'],
-          dw: ['hold', 'give', 'drop', 'feast'],
+            { t: 'Sam felt ___ with nobody to talk to, so he wished a friend was there.', dw: ['happy', 'hungry', 'sleepy'] },
+            { t: 'The ___ child wished for a friend because being alone made him unhappy.', dw: ['happy', 'hungry', 'sleepy'] } ] },
+        { w: 'solution', d: 'the answer to a problem',
+          dd: ['the problem you still need to fix', 'a question nobody has answered', 'a mistake that makes things worse', 'a clue that is not the answer yet'],
+          dw: ['problem', 'question', 'mistake', 'clue'],
           s: [
-            { t: 'The sly wolf tried to ___ a sheep from the field.', dw: ['give', 'believe', 'feast'] },
-            { t: 'Hold on tight, or the wind will ___ your hat away!', dw: ['hold', 'feast', 'believe'] } ] },
-        { w: 'stories', d: 'tales of things that have happened',
-          dd: ['things to be taught or learned', 'songs you sing', 'pictures you draw', 'rules you follow'],
-          dw: ['lessons', 'songs', 'pictures', 'rules'],
+            { t: 'The torn page was the problem, and tape was the ___.', dw: ['problem', 'question', 'mistake'] },
+            { t: 'We found the ___ to the riddle, so we knew the right answer.', dw: ['problem', 'question', 'puzzle'] } ] },
+        { w: 'villages', d: 'small groups of houses',
+          dd: ['big cities full of tall buildings', 'the lands outside of cities and towns', 'single houses standing far apart', 'tall mountains with no houses'],
+          dw: ['cities', 'houses', 'farms', 'countryside'],
           s: [
-            { t: 'Grandpa tells funny ___ about when he was a little boy.', dw: ['songs', 'pictures', 'rules'] },
-            { t: 'At bedtime, Dad reads me ___ from a big book.', dw: ['pictures', 'rules', 'teachers'] } ] }
+            { t: 'Those ___ are just small groups of houses, not big cities.', dw: ['cities', 'rivers', 'forests'] },
+            { t: 'The map shows three tiny ___, and each one is only a small group of houses.', dw: ['oceans', 'caves', 'farms'] } ] }
       ]
     },
     map: {
       key: 'map',
-      name: 'Social Studies Map Words',
+      name: 'Social Studies 2.5 Words',
       words: [
-        { w: 'continent', d: 'one of the seven large bodies of land on Earth',
-          dd: ['a place where many people live together under the same rules', 'land with water all around it', 'the largest body of water on Earth', 'a large area of flat land, usually covered in grass'],
-          dw: ['country', 'island', 'ocean', 'plain'],
-          s: [ { t: 'North America is the ___ where we live.', dw: ['country', 'ocean', 'river'] } ] },
-        { w: 'geography', d: "the study of Earth's physical features and people",
-          dd: ['the study of numbers and adding', 'the study of animals and plants', 'the study of stars and planets', "a map that shows Earth's features"],
-          dw: ['history', 'math', 'physical map', 'country'],
-          s: [ { t: 'In ___ class, we learn about mountains, rivers, and the people who live near them.', dw: ['math', 'music', 'reading'] } ] },
-        { w: 'physical map', d: "a map that shows Earth's features",
-          dd: ['a map that shows countries, states, and cities', 'a map that shows the streets in a town', 'a map that shows the weather'],
-          dw: ['political map', 'road map', 'weather map', 'geography'],
-          s: [ { t: 'To find the tallest mountains and longest rivers, look at a ___.', dw: ['political map', 'road map', 'weather map'] } ] },
-        { w: 'political map', d: 'a map that shows countries, states, and cities',
-          dd: ["a map that shows Earth's features", 'a map that shows the weather', 'a map that shows mountains and rivers', "the study of Earth's physical features and people"],
-          dw: ['physical map', 'road map', 'weather map', 'country'],
-          s: [ { t: 'To find the line between Florida and Georgia, look at a ___.', dw: ['physical map', 'weather map', 'geography'] } ] },
-        { w: 'country', d: 'a place where many people live together under the same rules',
-          dd: ['one of the seven large bodies of land on Earth', 'land with water all around it', 'a large area of flat land, usually covered in grass', 'a small group of houses on one street'],
-          dw: ['continent', 'island', 'desert', 'valley'],
-          s: [ { t: 'The United States is a ___ with fifty states.', dw: ['continent', 'island', 'ocean'] } ] },
-        { w: 'desert', d: 'land that is hot and dry',
-          dd: ['land that is cold and icy', 'land that is wet and muddy', 'a large area of flat land, usually covered in grass', 'a low place between mountains'],
-          dw: ['plain', 'valley', 'island', 'mountain'],
-          s: [ { t: 'A camel can walk for days across the hot, dry ___.', dw: ['ocean', 'lake', 'river'] } ] },
-        { w: 'lake', d: 'a body of water with land all around it',
-          dd: ['land with water all around it', 'the largest body of water on Earth', 'a body of freshwater that moves through land', 'a low place between mountains'],
-          dw: ['island', 'ocean', 'river', 'valley'],
-          s: [ { t: 'We rowed our boat across the ___ and could see land on every side.', dw: ['island', 'ocean', 'valley'] } ] },
-        { w: 'plain', d: 'a large area of flat land, usually covered in grass',
-          dd: ['the tallest kind of land on Earth', 'a low place between mountains', 'land that is hot and dry', 'land with water all around it'],
-          dw: ['valley', 'desert', 'mountain', 'island'],
-          s: [ { t: 'Cows ate grass on the wide, flat ___.', dw: ['mountain', 'ocean', 'desert'] } ] },
-        { w: 'mountain', d: 'the tallest kind of land on Earth',
-          dd: ['a large area of flat land, usually covered in grass', 'a low place between mountains', 'land with water all around it', 'a small, low bump of land'],
-          dw: ['valley', 'plain', 'island', 'continent'],
-          s: [ { t: 'We hiked all the way up the tall ___ and saw snow on top.', dw: ['valley', 'plain', 'lake'] } ] },
-        { w: 'river', d: 'a body of freshwater that moves through land',
-          dd: ['a body of water with land all around it', 'the largest body of water on Earth', 'land with water all around it', 'a low place between mountains'],
-          dw: ['lake', 'ocean', 'valley', 'island'],
-          s: [ { t: 'The water in the ___ flowed down the hill and into the sea.', dw: ['lake', 'ocean', 'valley'] } ] },
-        { w: 'island', d: 'land with water all around it',
-          dd: ['a body of water with land all around it', 'one of the seven large bodies of land on Earth', 'a large area of flat land, usually covered in grass', 'land with mountains all around it'],
-          dw: ['lake', 'valley', 'desert', 'mountain'],
-          s: [ { t: 'We took a boat to the little ___ in the middle of the sea.', dw: ['lake', 'valley', 'desert'] } ] },
-        { w: 'valley', d: 'a low place between mountains',
-          dd: ['the tallest kind of land on Earth', 'a large area of flat land, usually covered in grass', 'a high place on top of a mountain', 'a body of water with land all around it'],
-          dw: ['mountain', 'plain', 'island', 'lake'],
-          s: [ { t: 'The little town sat in a low ___ between two tall mountains.', dw: ['mountain', 'island', 'ocean'] } ] },
-        { w: 'ocean', d: 'the largest body of water on Earth',
-          dd: ['a body of water with land all around it', 'a body of freshwater that moves through land', 'one of the seven large bodies of land on Earth', 'a small pond in a park'],
-          dw: ['lake', 'river', 'continent', 'island'],
-          s: [ { t: 'Whales and sharks swim in the deep, salty ___.', dw: ['lake', 'river', 'desert'] } ] }
+        { w: 'conserve', d: 'to protect the environment from harm',
+          dd: ['to hurt the environment', 'to throw trash on the ground', 'to use something up as fast as you can', 'to leave a mess for someone else'],
+          dw: ['pollute', 'waste', 'litter', 'ruin'],
+          s: [ { t: 'We ___ water by turning off the faucet while we brush our teeth.', dw: ['pollute', 'waste', 'litter'] } ] },
+        { w: 'environment', d: 'everything around us',
+          dd: ['only the pets inside one house', 'things in nature that people use', 'the harm people do to air and water', 'a single tree in a park'],
+          dw: ['natural resources', 'pollution', 'weather', 'neighborhood'],
+          s: [ { t: 'The ___ is everything around us, like the air, water, land, plants, and animals.', dw: ['weather', 'neighborhood', 'pollution'] } ] },
+        { w: 'natural resources', d: 'things in nature that people use',
+          dd: ['toys made in a factory', 'everything around us', 'trash that hurts the water and air', 'rules people follow at school'],
+          dw: ['environment', 'pollution', 'toys', 'factories'],
+          s: [ { t: 'Water, trees, and sunlight are ___ because they come from nature and people use them.', dw: ['toys', 'factories', 'pollution'] } ] },
+        { w: 'pollute', d: 'to hurt the environment',
+          dd: ['to protect the environment from harm', 'to clean up a mess', 'to help plants and animals', 'to keep water safe and clear'],
+          dw: ['conserve', 'clean', 'protect', 'help'],
+          s: [ { t: 'Trash in the river can ___ the water and make the fish sick.', dw: ['conserve', 'clean', 'protect'] } ] }
       ]
     }
   };
